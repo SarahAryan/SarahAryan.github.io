@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothing here yet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            text-align: center;
+            padding: 1rem;
+            
+            /* =============================================
+               بازسازی دقیق پس‌زمینه تصویر (سبز با شکستگی و گرادیان)
+               بدون هیچ حرکت، انیمیشن یا افکت سرگیجه‌آور
+            ============================================= */
+            background: 
+                /* لایه اصلی گرادیان سبز تیره به سبز ملایم (مورب) */
+                linear-gradient(125deg, #1a3a2c 0%, #2b5a42 50%, #1f4a38 100%),
+                
+                /* لکه‌های روشن و سایه (شکستگی نور) */
+                radial-gradient(circle at 15% 25%, rgba(210,235,170,0.1) 0%, transparent 35%),
+                radial-gradient(circle at 85% 70%, rgba(140,190,110,0.08) 0%, transparent 45%),
+                radial-gradient(circle at 40% 80%, rgba(0,0,0,0.2) 0%, transparent 60%),
+                
+                /* ترک‌های مورب ظریف (شکستگی) */
+                repeating-linear-gradient(45deg, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 10px),
+                repeating-linear-gradient(-45deg, rgba(255,250,210,0.04) 0px, rgba(255,250,210,0.04) 1px, transparent 1px, transparent 8px),
+                
+                /* بافت دانه‌ریز (نویز طبیعی) */
+                repeating-linear-gradient(0deg, rgba(180,210,130,0.03) 0px, rgba(180,210,130,0.03) 1px, transparent 1px, transparent 4px);
+            
+            background-blend-mode: overlay, normal, normal, normal, normal, normal;
+            color: #f5f0e1;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
+
+        .message {
+            background: rgba(0,0,0,0.1);
+            backdrop-filter: blur(2px);
+            padding: 2rem 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(240,235,200,0.2);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 500;
+            font-family: 'Segoe UI', 'Poppins', 'Georgia', serif;
+            letter-spacing: -0.5px;
+            color: #fff5e0;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 550px) {
+            h1 { font-size: 2rem; }
+            .message { padding: 1.2rem 1.8rem; }
+        }
+    </style>
+    <!-- فونت اختیاری برای زیبایی (اختیاری) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Nothing here... yet</h1>
+    </div>
+</body>
+</html>
